@@ -1,0 +1,24 @@
+Telephone — How often do you have telephone conversations in this job?
+Freedom to Make Decisions — How much decision making freedom, without supervision, does the job offer?
+Structured versus Unstructured Work — To what extent is this job structured for the worker, rather than allowing the worker to determine tasks, priorities, and goals?
+Spend Time Sitting — How much does this job require sitting?
+Spend Time Sitting — How much does this job require sitting?
+Spend Time Using Your Hands to Handle, Control, or Feel Objects, Tools, or Controls — How much does this job require using your hands to handle, control, or feel objects, tools or controls?
+Freedom to Make Decisions — How much decision making freedom, without supervision, does the job offer?
+Face-to-Face Discussions — How often do you have to have face-to-face discussions with individuals or teams in this job?
+Importance of Being Exact or Accurate — How important is being very exact or highly accurate in performing this job?
+Contact With Others — How much does this job require the worker to be in contact with others (face-to-face, by telephone, or otherwise) in order to perform it?
+Face-to-Face Discussions — How often do you have to have face-to-face discussions with individuals or teams in this job?
+Electronic Mail — How often do you use electronic mail in this job?
+Structured versus Unstructured Work — To what extent is this job structured for the worker, rather than allowing the worker to determine tasks, priorities, and goals?
+Telephone — How often do you have telephone conversations in this job?
+Face-to-Face Discussions — How often do you have to have face-to-face discussions with individuals or teams in this job?
+Contact With Others — How much does this job require the worker to be in contact with others (face-to-face, by telephone, or otherwise) in order to perform it?
+Electronic Mail — How often do you use electronic mail in this job?
+Telephone — How often do you have telephone conversations in this job?
+Work With Work Group or Team — How important is it to work with others in a group or team in this job?
+Deal With External Customers — How important is it to work with external customers or the public in this job?
+Letters and Memos — How often does the job require written letters and memos?
+Coordinate or Lead Others — How important is it to coordinate or lead others in accomplishing work activities in this job?
+Indoors, Environmentally Controlled — How often does this job require working indoors in environmentally controlled conditions?
+Time Pressure — How often does this job require the worker to meet strict deadlines?

@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "asoK2IdtxTZHfjiuPugy6L7UOA+yDde00/o50pFiOEFemzshp3i5kncHfbmR5F0FFPkq+rzz+bZWVr8+wfBLcw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\gamec\\Desktop\\Minecraft-UI\\MultiMediaSolver\\MultiMediaSolver\\MultiMediaSolver.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\gamec\\.nuget\\packages\\aspose.slides.net\\22.3.0\\aspose.slides.net.22.3.0.nupkg.sha512",
+    "C:\\Users\\gamec\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
+    "C:\\Users\\gamec\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\gamec\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "C:\\Users\\gamec\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
+    "C:\\Users\\gamec\\.nuget\\packages\\system.drawing.common\\5.0.2\\system.drawing.common.5.0.2.nupkg.sha512",
+    "C:\\Users\\gamec\\.nuget\\packages\\system.text.encoding.codepages\\4.4.0\\system.text.encoding.codepages.4.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}
