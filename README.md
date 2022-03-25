@@ -3,7 +3,7 @@
  
  Haven't added error handling at all. Make sure you follow template so errors dont occur. 
  
- ![GitHub Logo](/imgs/Screenshot 2022-03-25 023636.png)
- ![GitHub Logo](/imgs/Screenshot 2022-03-25 023703.png)
- ![GitHub Logo](/imgs/Screenshot 2022-03-25 023723.png)
- ![GitHub Logo](/imgs/Screenshot 2022-03-25 023822.png)
+ ![GitHub Logo](/imgs/1.png)
+ ![GitHub Logo](/imgs/2.png)
+ ![GitHub Logo](/imgs/3.png)
+ ![GitHub Logo](/imgs/4.png)
