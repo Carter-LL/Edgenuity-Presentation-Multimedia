@@ -1,1 +1,0 @@
-https://products.aspose.app/slides/import/jpg-to-ppt
