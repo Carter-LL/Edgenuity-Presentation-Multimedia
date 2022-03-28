@@ -13,4 +13,5 @@ Edit the #Global Settings in the top of the main.py file to the data you receive
 # About
 - Makes every slide perfectly with the correct data from the given urls. 
 - Still haven't added image support yet. Should be simple to google and add images though.
+- Some urls have different site structures currently supports 2 different structures yet to test others if any.
 
