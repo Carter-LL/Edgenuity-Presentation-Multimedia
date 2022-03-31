@@ -16,10 +16,10 @@ pFileName = "Market Careers.pptx"
 #         "https://www.onetonline.org/link/summary/41-4012.00",
 #         "https://www.onetonline.org/link/summary/41-9011.00"]
 
-links = ["http://www.onetonline.org/link/details/15-1151.00#Tasks",
-"http://www.onetonline.org/link/details/15-1131.00#Tasks",
-"http://www.onetonline.org/link/details/15-1141.00#WorkActivities",
-"http://www.onetonline.org/link/details/15-1134.00#WorkContext"]
+links = ["http://www.onetonline.org/link/details/23-1011.00#Tasks",
+"http://www.onetonline.org/link/details/33-9032.00#Tasks",
+"http://www.onetonline.org/link/details/33-3051.01#Tasks",
+"http://www.onetonline.org/link/details/33-2011.01#WorkActivities"]
 
 prs = Presentation()
 
@@ -142,6 +142,23 @@ def make_MediaSlides():
                                 if len(tasks) != 4:
                                     tasks.insert(len(tasks) + 1, s.strip())
                                     print(f"Added Task - {bcolors.OKGREEN}{s.strip()}{bcolors.ENDC}")
+        if len(tasks) != 4:
+            classes = [value
+                       for element in soup.find_all(class_=True)
+                       for value in element["class"]]
+            div = soup.find_all('div', {"class" : "d-flex flex-nowrap pb-1"})
+            for d in div:
+                href = d.find("a")
+                newtext = d.find('div', {"class" : "order-2 flex-grow-1"})
+                if "task" in str(href):
+                    if not "?" in newtext.text:
+                        #if not "-" in d.text:
+                        if len(tasks) != 4:
+                            split = newtext.text.split(".")
+                            for s in split:
+                                if len(tasks) != 4 and s.strip():
+                                    tasks.insert(len(tasks) + 1, s.strip())
+                                    print(f"Added Task - {bcolors.OKGREEN}{s.strip()}{bcolors.ENDC}")
         
         if len(tasks) != 4:
             print(f"Only contains {bcolors.FAIL}{len(tasks)}{bcolors.ENDC} out of 4 tasks. Exiting..")
@@ -175,6 +192,23 @@ def make_MediaSlides():
                                 split = d.text.split(".")
                                 for s in split:
                                     if len(activities) != 4:
+                                        activities.insert(len(activities) + 1, s.strip())
+                                        print(f"Added Activity - {bcolors.OKGREEN}{s.strip()}{bcolors.ENDC}")
+        if len(activities) != 4:
+            classes = [value
+                       for element in soup.find_all(class_=True)
+                       for value in element["class"]]
+            div = soup.find_all('div', {"class" : "d-flex flex-nowrap pb-1"})
+            for d in div:
+                href = d.find("a")
+                newtext = d.find('div', {"class" : "order-2 flex-grow-1"})
+                if "workactivities" in str(href):
+                    if not "?" in newtext.text:
+                        if "-" in newtext.text:
+                            if len(activities) != 4:
+                                split = newtext.text.split(".")
+                                for s in split:
+                                    if len(activities) != 4 and s.strip():
                                         activities.insert(len(activities) + 1, s.strip())
                                         print(f"Added Activity - {bcolors.OKGREEN}{s.strip()}{bcolors.ENDC}")
         if len(activities) != 4:
@@ -217,6 +251,27 @@ def make_MediaSlides():
                                         #    s+= xx + " "
                                         contexts.insert(len(contexts) + 1, s.replace("”", "").replace("“", "").strip())
                                         print(f"Added Context - {bcolors.OKGREEN}{s.replace('”', '').replace('“', '').strip()}{bcolors.ENDC}")
+        if len(contexts) != 4: #and not "%" in newtext.text and not "responded" in newtext.text
+            classes = [value
+                       for element in soup.find_all(class_=True)
+                       for value in element["class"]]
+            div = soup.find_all('div', {"class" : "d-flex flex-nowrap pb-1"})
+            for d in div:
+                href = d.find("a")
+                newtext = d.find('div', {"class" : "order-2 flex-grow-1"})
+                if "workcontext" in str(href):
+                    if "?" in newtext.text:
+                        if "-" in newtext.text:
+                            if len(contexts) != 4:
+                                split = newtext.text.split(".")
+                                for s in split:
+                                    if len(contexts) != 4 and s.strip():
+                                        if "%" in s.strip():
+                                            contexts.insert(len(contexts) + 1, s.strip().split("?")[0] + "?")
+                                            print(f"Added Context - {bcolors.OKGREEN}{s.strip().split('?')[0] + '?'}{bcolors.ENDC}")
+                                        else:
+                                            contexts.insert(len(contexts) + 1, s.strip())
+                                            print(f"Added Context - {bcolors.OKGREEN}{s.strip()}{bcolors.ENDC}")
         if len(contexts) != 4:
             print(f"Only contains {bcolors.FAIL}{len(contexts)}{bcolors.ENDC} out of 4 contexts. Exiting..")
             return
@@ -264,6 +319,20 @@ def make_MediaSlides():
                     numbers.insert(len(numbers) + 1, refractorInt(a))
                     print(f"Added Annual - {bcolors.OKGREEN}{a}{bcolors.ENDC}")
               
+        if len(annuals) != 4:
+            classes = [value
+                       for element in soup.find_all(class_=True)
+                       for value in element["class"]]
+            td = soup.find_all('dd', {"class" : "col-sm-9 col-form-label pt-xso-0"})
+            for d in td:
+                if "$" in d.text:
+                    if "annual" in d.text:
+                        a = d.text.split("hourly, ")[1].split(" annual")[0]
+                        annuals.insert(len(annuals) + 1, Category + "|" + a)
+                        numbers.insert(len(numbers) + 1, refractorInt(a))
+                        print(f"Added Annual - {bcolors.OKGREEN}{a}{bcolors.ENDC}")
+            
+    
     print(f"{bcolors.WARNING}Annuals = ")
     for s in annuals:
         print(s)
